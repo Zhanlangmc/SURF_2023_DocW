@@ -1,8 +1,5 @@
 # ScaleDoc: A Two Stage Approach for Scale Aware Document Dewarping
 
-# Poster
-![SURF-2023-0121-Poster.jpg](imgs%2FSURF-2023-0121-Poster.jpg)
-
 # Introduction
 Document dewarping has been researched for many years
 but remains unresolved, particularly due to multi-scale document issues
@@ -32,3 +29,5 @@ More information about dataset **DocW** could be found in [dataset.md](dataset.m
 ![result2.png](imgs%2Fresult2.png)
 
 ![result3.png](imgs%2Fresult3.png)
+
+# Poster
