@@ -1,10 +1,27 @@
-# Multi-Scale Document Dewarping via an End-to-End Deep Neural Network Approach
+# ScaleDoc: A Two Stage Approach for Scale Aware Document Dewarping
 
 # Poster
 ![SURF-2023-0121-Poster.jpg](imgs%2FSURF-2023-0121-Poster.jpg)
 
 # Introduction
-Over the past decade, with the ubiquity of smartphones, digitizing documents by capturing them with phone cameras has become the norm. While this approach has undeniably enhanced convenience, it also means that the procured documents might suffer from poor quality or morphological distortions, posing substantial challenges for subsequent document recognition [1]. Although there have been advancements in document dewarping techniques in recent years, the correction of small-scale document data remains inadequately addressed. To address this gap, our team introduced a novel deep learning-based multi-scale document correction method. Initially, a coarse correction of document images is achieved based on the fully convolutional attention mechanism-based bounding prediction network (FCViT)[1]. Subsequently, we utilized the curvature dewarping technique based on sparse control points prediction from DDCP [2] for further refinement. As a final measure, the corrected images undergo super-resolution enhancement using DocDiff[3], a lightweight model premised on residual prediction, augmenting their usability.
+Document dewarping has been researched for many years
+but remains unresolved, particularly due to multi-scale document issues
+(where the background occupies a large proportion). To enhance the
+multi-scale awareness of document dewarping algorithms, we propose a
+two-stage framework with explicit scale-aware capabilities, named Scale-
+Doc, which consists of a scale-aware stage and a dewarping stage. The
+scale-aware stage, a convolutional network based on self-attention mechanisms, is proposed to explicitly remove the document background. The
+dewarping stage introduces a lightweight method that dewarps warped
+documents by predicting document edges using sparse control points.
+Furthermore, to train the scale-aware stage network and validate the
+effectiveness of ScaleDoc, a new document dataset, DocW, has been cre-
+ated. DocW comprises 1k images of varying scales and warping levels, all
+of which are authentically captured rather than generated. Comparative
+and ablation studies are conducted on the newly created DocW dataset
+and DocUnet benchmark dataset. Dewarping results, measured by the
+MS-SSIM and LD metrics, and OCR results, measured by the CER and
+ED indicate that the proposed model outperforms the current state-of-
+the-art (SOTA) models in dealing with multi-scale document challenges.
 
 # Dataset
 More information about dataset **DocW** could be found in [dataset.md](dataset.md)
